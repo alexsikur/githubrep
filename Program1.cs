@@ -13,15 +13,23 @@ namespace ConsoleApp2
             double r;
             double h;
             double v = 0;
-
-            Console.WriteLine("Zadaj radius:");
-            r = double.Parse(Console.ReadLine());
-            Console.WriteLine("Zadaj vysku:");
-            h = double.Parse(Console.ReadLine());
-            v = Math.PI*(r*r)*h / 3;
-            Console.WriteLine(v);
-            Console.ReadLine();
+            double c = 0;
             
+
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine("Zadaj radius:");
+                r = double.Parse(Console.ReadLine());
+                Console.WriteLine("Zadaj vysku:");
+                h = double.Parse(Console.ReadLine());
+                v = Math.PI * (r * r) * h / 3;
+                c = v + c;
+                Console.WriteLine(v);
+                
+            }
+            Console.WriteLine(c);
+            Console.ReadLine();
+
         }
     }
 }
